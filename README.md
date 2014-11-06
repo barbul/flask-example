@@ -1,6 +1,6 @@
 Flask on OpenShift
 ==================
-
+[ ![Codeship Status for barbul/flask-example](https://codeship.io/projects/2964bfb0-4799-0132-172b-4a10cd38100b/status)](https://codeship.io/projects/45653)
 This git repository helps you get up and running quickly w/ a Flask installation
 on OpenShift.
 
