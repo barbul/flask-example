@@ -14,7 +14,7 @@ echo "DONE linting"'''
       parallel {
         stage('stage2') {
           steps {
-            mail(subject: 'test', body: 'testing', from: 'jenkins', to: 'bartek.bulzak@radio-canada.ca')
+            echo 'stage 2'
           }
         }
         stage('stage2b') {
@@ -22,6 +22,11 @@ echo "DONE linting"'''
             echo 'stage2b'
           }
         }
+      }
+    }
+    stage('stage3') {
+      steps {
+        echo 'stage 3'
       }
     }
   }
