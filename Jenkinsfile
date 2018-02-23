@@ -10,5 +10,10 @@ echo "DONE linting"'''
         echo 'Thanks for waiting'
       }
     }
+    stage('stage2') {
+      steps {
+        mail(subject: 'test', body: 'testing', from: 'jenkins', to: 'bartek.bulzak@radio-canada.ca')
+      }
+    }
   }
 }
