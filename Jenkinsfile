@@ -11,8 +11,17 @@ echo "DONE linting"'''
       }
     }
     stage('stage2') {
-      steps {
-        mail(subject: 'test', body: 'testing', from: 'jenkins', to: 'bartek.bulzak@radio-canada.ca')
+      parallel {
+        stage('stage2') {
+          steps {
+            mail(subject: 'test', body: 'testing', from: 'jenkins', to: 'bartek.bulzak@radio-canada.ca')
+          }
+        }
+        stage('stage2b') {
+          steps {
+            echo 'stage2b'
+          }
+        }
       }
     }
   }
